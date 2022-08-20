@@ -1,0 +1,94 @@
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import List from './List'
+import { NavItemsParams, NAV_ITEMS } from './NavItems'
+
+const Navbar = () => {
+  const [dropdown, setDropdown] = useState<boolean>(false)
+
+  return (
+    <>
+      <Nav>
+        <Header>
+          <Link to="/">
+            <p>JAEHYUK</p>
+          </Link>
+          <NavItems>
+            {NAV_ITEMS.map((item: NavItemsParams) => {
+              return <List data={item} />
+            })}
+          </NavItems>
+        </Header>
+      </Nav>
+    </>
+  )
+}
+
+export default Navbar
+
+const Nav = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1210px;
+  padding: 0;
+  text-align: center;
+  z-index: 100;
+  p {
+    font-family: 'Pretendard';
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 40px;
+    width: 110px;
+    float: left;
+    margin: 20px 0 20px 0;
+    transform: translateX(-500px);
+  }
+`
+const Header = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 1210px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  z-index: 1;
+`
+const NavItems = styled.ul`
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  right: 5%;
+  width: 35%;
+  ul {
+    width: 100%;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 15px;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px 0;
+  }
+`
