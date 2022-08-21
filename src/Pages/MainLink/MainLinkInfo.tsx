@@ -14,6 +14,6 @@ export const LINK_LIST: MainLinkParams[] = [
   },
   {
     id: 3,
-    src: '/public/Imgs/main_linkimg03.png'
+    src: '/public/Imgs/main_linkimg03.jpeg'
   }
 ]

@@ -31,6 +31,7 @@ const ListContents = styled.div`
 `
 
 const Img = styled.img`
+  height: 500px;
   background-size: cover;
   opacity: 0.4;
   :hover {
