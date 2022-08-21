@@ -11,14 +11,14 @@ const Navbar = () => {
     <>
       <Nav>
         <Header>
-          <Link to="/">
-            <p>JAEHYUK</p>
-          </Link>
           <NavItems>
             {NAV_ITEMS.map((item: NavItemsParams) => {
               return <List data={item} />
             })}
           </NavItems>
+          <Link to="/">
+            <p>JAEHYUK</p>
+          </Link>
         </Header>
       </Nav>
     </>
@@ -28,8 +28,9 @@ const Navbar = () => {
 export default Navbar
 
 const Nav = styled.div`
-  position: absolute;
+  position: fixed;
   display: flex;
+  background: black;
   justify-content: space-around;
   top: 0;
   left: 0;
@@ -48,7 +49,6 @@ const Nav = styled.div`
     width: 110px;
     float: left;
     margin: 20px 0 20px 0;
-    transform: translateX(-500px);
   }
 `
 const Header = styled.div`
@@ -66,11 +66,16 @@ const NavItems = styled.ul`
   display: flex;
   position: absolute;
   justify-content: space-between;
-  right: 5%;
-  width: 35%;
+  top: 5%;
+  left: 0%;
+  width: 500px;
+
   ul {
+    margin-right: 20px;
+    list-style: none;
     width: 100%;
     display: block;
+    padding: 0;
     list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -82,13 +87,14 @@ const NavItems = styled.ul`
     list-style: none;
   }
   a {
+    width: 100%;
+    margin-right: 20px;
     font-family: 'Pretendard';
     font-weight: 300;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 30px;
     color: #fff;
     text-decoration: none;
-    margin-right: 20px;
-    padding: 5px 0;
+    padding: 0;
   }
 `

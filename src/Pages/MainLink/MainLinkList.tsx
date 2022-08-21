@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { MainLinkParams } from './MainLinkInfo'
 
@@ -10,7 +11,10 @@ const MainLinkList = ({ data }: Props) => {
   return (
     <>
       <ListContents>
-        <Img src={data.src} />
+        <Link to={data.path}>
+          <Img src={data.src} />
+        </Link>
+        <p>{data.title}</p>
       </ListContents>
     </>
   )
@@ -28,10 +32,26 @@ const ListContents = styled.div`
   background: #333;
   overflow: hidden;
   cursor: pointer;
+
+  p {
+    position: absolute;
+    font-family: 'Pretendard';
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 40px;
+    width: 110px;
+    color: #fff;
+    text-decoration: none;
+    top: 80%;
+    left: 35%;
+    justify-items: legacy;
+  }
 `
 
 const Img = styled.img`
+  position: absolute;
   height: 500px;
+  width: 100%;
   background-size: cover;
   opacity: 0.4;
   :hover {

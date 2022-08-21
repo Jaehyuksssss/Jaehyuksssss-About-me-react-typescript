@@ -26,6 +26,6 @@ const Movie = styled.div`
   opacity: 0.8;
   video {
     width: 100%;
-    height:90%;
+    height:100%;
   }
 `

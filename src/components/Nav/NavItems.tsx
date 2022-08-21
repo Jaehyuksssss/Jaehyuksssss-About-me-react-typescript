@@ -60,7 +60,7 @@ export const NAV_ITEMS: NavItemsParams[] = [
   {
     id: 4,
     tag: "customer",
-    title: "CONTACT ME",
+    title: "CONTACT",
     path: "../Pages/Menu/Cs",
     cName: "nav-item",
     isDropDown: true,

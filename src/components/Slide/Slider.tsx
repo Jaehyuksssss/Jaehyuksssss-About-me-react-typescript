@@ -55,52 +55,55 @@ export default function Slider() {
 const DATA_SLIDER = [
     {
       id: 1,
-      srcImg: '/public/Imgs/Img1.jpeg',
+      srcImg: '/public/Imgs/Img4.jpeg',
       alt: '첫번째 슬라이드'
     },
     {
       id: 2,
-      srcImg: '/public/Imgs/Img2.jpeg',
+      srcImg: '/public/Imgs/Img5.jpeg',
       alt: '두번째 슬라이드'
     },
     {
       id: 3,
-      srcImg: '/public/Imgs/Img3.jpeg',
+      srcImg: '/public/Imgs/Img6.png',
       alt: '세번째 슬라이드'
     }
   ]
 
   
 
+  const SliderImg = styled.div`
+  display: flex;
+  position: relative;
+  margin:0;
+  top:30%;
+  left: 0;
+  height: 50vh;
+  img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  z-index: 1;
+  
+  & .slide-active-anim{
+    opacity: 1;
+  }
+  & .slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+    animation: slide-up 1s ease 0.5s;
+  }
+}
+`
 const ContextBtn = styled.div`
   position: absolute;
   top: 40%;
   left: 15%;
   z-index: 10;
-`
-const SliderImg = styled.div`
-  display: flex;
-  position: relative;
-  margin:0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-  overflow: hidden;
-
-    & .slide-active-anim{
-            opacity: 1;
-    }
-    & .slide{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        opacity: 0;
-        transition: opacity ease-in-out 0.4s;
-        animation: slide-up 1s ease 0.5s;
-    }
-  }
 `
 const SlidePagination = styled.div`
   button {

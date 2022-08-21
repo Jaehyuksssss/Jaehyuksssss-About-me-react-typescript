@@ -6,7 +6,7 @@ import FooterList from "./FooterList";
 
 enum FooterUrlType {
   FACE_BOOK = 'https://www.facebook.com/teamfresh.timf/',
-  BRUNCH = 'https://brunch.co.kr/@f2784a16dd71437#articles',
+  BLOG = 'https://jaehyuksssss.github.io/',
   YOUTUBE = 'https://www.youtube.com/channel/UCe04X8Shi4hQnUPvhE2TYHA'
 }
 
@@ -16,7 +16,7 @@ const Footer = () => {
       <MainFooter>
         <FooterContents>
           <Logo>
-            <img src="/public/Imgs/logo.jpg" alt="logo" />
+          <p>JAEHYUK</p>
           </Logo>
           <CompanyInfo>
             <ul>
@@ -38,7 +38,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href={FooterUrlType.BRUNCH}>
+                <a href={FooterUrlType.BLOG}>
                   <img src="/public/Imgs/sns_brunch.png" />
                 </a>
               </li>
@@ -75,10 +75,16 @@ const FooterContents = styled.div`
 `;
 
 const Logo = styled.div`
+p {
+  font-family: 'Pretendard';
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 40px;
+  width: 110px;
   float: left;
-  margin: 0 0 30px;
-  img {
-    width: 100px;
+  margin: 20px 0 20px 0;
   }
 `;
 

@@ -15,7 +15,6 @@ const SlideImg = ({ src }: Props) => {
 export default SlideImg;
 
 const Img = styled.img`
-width: 100%;
 top: 50%;
 left: 50%;
 width: 100%;
