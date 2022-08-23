@@ -70,7 +70,7 @@ export const NAV_ITEMS: NavItemsParams[] = [
         link: "/notice",
       },
       {
-        title: "팀프뉴스",
+        title: "뉴스",
         link: "/news",
       },
       {
