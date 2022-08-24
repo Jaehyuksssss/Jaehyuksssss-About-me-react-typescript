@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import MainImageText from './MainImageText'
 
 interface Slider {
-    id: number
-    index: number
-    srcImg: string
-  }
+  id: number
+  index: number
+  srcImg: string
+}
 
 export default function Slider() {
   const [slideIndex, setSlideIndex] = useState(1)
@@ -24,7 +23,6 @@ export default function Slider() {
     return () => clearInterval(interval)
   }, [slideIndex])
 
-
   return (
     <SliderImg>
       {DATA_SLIDER.map(({ id, srcImg }) => {
@@ -38,7 +36,6 @@ export default function Slider() {
         )
       })}
       <ContextBtn>
-        <MainImageText />
         <SlidePagination>
           {Array.from({ length: 3 }).map((item, index) => (
             <button
@@ -53,28 +50,27 @@ export default function Slider() {
 }
 
 const DATA_SLIDER = [
-    {
-      id: 1,
-      srcImg: '/public/Imgs/Img4.jpeg',
-      alt: '첫번째 슬라이드'
-    },
-    {
-      id: 2,
-      srcImg: '/public/Imgs/Img5.jpeg',
-      alt: '두번째 슬라이드'
-    },
-    {
-      id: 3,
-      srcImg: '/public/Imgs/Img6.png',
-      alt: '세번째 슬라이드'
-    }
-  ]
+  {
+    id: 1,
+    srcImg: '/public/Imgs/Img4.jpeg',
+    alt: '첫번째 슬라이드'
+  },
+  {
+    id: 2,
+    srcImg: '/public/Imgs/Img5.jpeg',
+    alt: '두번째 슬라이드'
+  },
+  {
+    id: 3,
+    srcImg: '/public/Imgs/Img6.png',
+    alt: '세번째 슬라이드'
+  }
+]
 
-  
-
-  const SliderImg = styled.div`
+const SliderImg = styled.div`
   display: flex;
   position: relative;
+  justify-content:center;
   margin:0;
   top:30%;
   left: 0;
@@ -90,7 +86,6 @@ const DATA_SLIDER = [
     opacity: 1;
   }
   & .slide{
-    width: 100%;
     height: 100%;
     position: absolute;
     opacity: 0;
@@ -128,4 +123,3 @@ const SlidePagination = styled.div`
     background: #005cdf;
   }
 `
-
