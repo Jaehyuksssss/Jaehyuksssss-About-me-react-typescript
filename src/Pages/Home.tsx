@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, {  } from 'react'
 import MainLink from './MainLink/MainLink'
 import MainIntroduce from './MainIntroduce'
 import MainBusiness from './MainBusiness/MainBusiness'
-import MainImageText from '../components/Slide/MainImageText'
-import SlideImg from '../components/Slide/SlideImg'
 import styled from 'styled-components'
 import Slider from '../components/Slide/Slider'
 
