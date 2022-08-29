@@ -10,7 +10,7 @@ const MainImageText = () => {
        I'm a front-end engineer
       </MainImageTitle>
       <MainImageComment>
-      반갑습니다. 프론트엔드 개발자 임재혁입니다
+      반갑습니다. 프론트엔드 개발자 임재혁입니다.
       </MainImageComment>
     </MainTextWrap>
   )
