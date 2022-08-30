@@ -57,6 +57,7 @@ const Footer = () => {
 
 export default Footer;
 
+
 const MainFooter = styled.footer`
   display: table;
   width: 100%;
